@@ -1,0 +1,395 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/regis
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 90
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 25
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: null
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 20
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 670
+    content: "\e[0;33m\e[01;32mregis@black\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 864
+    content: t
+  - delay: 50
+    content: u
+  - delay: 50
+    content: t
+  - delay: 50
+    content: o
+  - delay: 50
+    content: r
+  - delay: 50
+    content: ' '
+  - delay: 50
+    content: l
+  - delay: 50
+    content: o
+  - delay: 50
+    content: c
+  - delay: 50
+    content: a
+  - delay: 50
+    content: l
+  - delay: 50
+    content: ' '
+  - delay: 50
+    content: q
+  - delay: 50
+    content: u
+  - delay: 50
+    content: i
+  - delay: 50
+    content: c
+  - delay: 50
+    content: k
+  - delay: 50
+    content: s
+  - delay: 50
+    content: t
+  - delay: 50
+    content: a
+  - delay: 50
+    content: r
+  - delay: 50
+    content: t
+  - delay: 50
+    content: "\r\n"
+  - delay: 200
+    content: "\e[32m==================================================\r\n        Interactive platform configuration\r\n==================================================\e[0m\r\n"
+  - delay: 20
+    content: "\e[33mYour website domain name for students (LMS)\e[0m [overhang.io] "
+  - delay: 863
+    content: "\r\n\e[33mYour website domain name for teachers (CMS)\e[0m [studio.overhang.io] "
+  - delay: 498
+    content: "\r\n\e[33mYour platform name/title\e[0m [My Open edX] "
+  - delay: 527
+    content: "\r\n\e[33mYour public contact email address\e[0m [contact@overhang.io] "
+  - delay: 524
+    content: "\r\n\e[33mThe default language code for the platform\e[0m [en] "
+  - delay: 518
+    content: "\r\n\e[33mActivate SSL/TLS certificates for HTTPS access? Important note:this will NOT work in a development environment.\e[0m [yN] "
+  - delay: 646
+    content: "\r\n\e[33mActivate Student Notes service (https://open.edx.org/features/student-notes)?\e[0m [Yn] "
+  - delay: 453
+    content: "\r\n\e[33mActivate Xqueue for external grader services (https://github.com/edx/xqueue)?\e[0m [yN] "
+  - delay: 478
+    content: "\r\n"
+  - delay: 14
+    content: "\e[34mConfiguration saved to /home/data/regis/.local/share/tutor/config.yml\e[0m\r\n"
+  - delay: 116
+    content: "\e[34mEnvironment generated in /home/data/regis/.local/share/tutor/env\e[0m\r\n\e[32m==============================================\r\n        Stopping any existing platform\r\n==============================================\e[0m\r\n"
+  - delay: 22
+    content: "\e[35mdocker-compose -f /home/data/regis/.local/share/tutor/env/local/docker-compose.yml --project-name tutor_local rm --stop --force\e[0m\r\n"
+  - delay: 326
+    content: "No stopped containers\r\n"
+  - delay: 58
+    content: "\e[32m================================================\r\n        Database creation and migrations\r\n================================================\e[0m\r\n"
+  - delay: 45
+    content: "\e[34mCreating lms/cms databases...\e[0m\r\n"
+  - delay: 30
+    content: "\e[35mdocker-compose -f /home/data/regis/.local/share/tutor/env/local/docker-compose.yml --project-name tutor_local run --rm lms bash -e -c dockerize -wait tcp://mysql:3306 -timeout 20s\r\nmysql -u root --password=\"Xdanai0t\" --host \"mysql\" -e 'CREATE DATABASE IF NOT EXISTS openedx;'\r\nmysql -u root --password=\"Xdanai0t\" --host \"mysql\" -e 'GRANT ALL ON openedx.* TO \"openedx\"@\"%\" IDENTIFIED BY \"E3LffAYR\";'\r\n\r\n\r\nmysql -u root --password=\"Xdanai0t\" --host \"mysql\" -e 'CREATE DATABASE IF NOT EXISTS notes;'\r\nmysql -u root --password=\"Xdanai0t\" --host \"mysql\" -e 'GRANT ALL ON notes.* TO \"notes\"@\"%\" IDENTIFIED BY \"3Wl62Z51\";'\e[0m\r\n"
+  - delay: 475
+    content: "Creating tutor_local_elasticsearch_1 ... \r\r\n"
+  - delay: 5
+    content: "Creating tutor_local_mysql_1         ... \r\r\n"
+  - delay: 5
+    content: "Creating tutor_local_memcached_1     ... \r\r\n"
+  - delay: 7
+    content: "Creating tutor_local_smtp_1          ... \r\r\n"
+  - delay: 11
+    content: "Creating tutor_local_rabbitmq_1      ... \r\r\n"
+  - delay: 18
+    content: "Creating tutor_local_mongodb_1       ... \r\r\n"
+  - delay: 1969
+    content: "\e[6A\e[2K\rCreating tutor_local_elasticsearch_1 ... \e[32mdone\e[0m\r\e[6B"
+  - delay: 486
+    content: "\e[4A\e[2K\rCreating tutor_local_memcached_1     ... \e[32mdone\e[0m\r\e[4B"
+  - delay: 983
+    content: "\e[3A\e[2K\rCreating tutor_local_smtp_1          ... \e[32mdone\e[0m\r\e[3B"
+  - delay: 960
+    content: "\e[1A\e[2K\rCreating tutor_local_mongodb_1       ... \e[32mdone\e[0m\r\e[1BCreating tutor_local_forum_1         ... \r\r\n"
+  - delay: 1256
+    content: "\e[3A\e[2K\rCreating tutor_local_rabbitmq_1      ... \e[32mdone\e[0m\r\e[3B"
+  - delay: 594
+    content: "\e[1A\e[2K\rCreating tutor_local_forum_1         ... \e[32mdone\e[0m\r\e[1B"
+  - delay: 557
+    content: "\e[6A\e[2K\rCreating tutor_local_mysql_1         ... \e[32mdone\e[0m\r\e[6B"
+  - delay: 3839
+    content: "2019/03/24 23:15:17 Waiting for: tcp://mysql:3306\r\n2019/03/24 23:15:17 Connected to tcp://mysql:3306\r\n"
+  - delay: 54
+    content: "mysql: [Warning] Using a password on the command line interface can be insecure.\r\n"
+  - delay: 118
+    content: "mysql: [Warning] Using a password on the command line interface can be insecure.\r\n"
+  - delay: 7
+    content: "mysql: [Warning] Using a password on the command line interface can be insecure.\r\n"
+  - delay: 6
+    content: "mysql: [Warning] Using a password on the command line interface can be insecure.\r\n"
+  - delay: 1278
+    content: "\e[34mRunning lms migrations...\e[0m\r\n"
+  - delay: 71
+    content: "\e[35mdocker-compose -f /home/data/regis/.local/share/tutor/env/local/docker-compose.yml --project-name tutor_local run --rm lms bash -e -c dockerize -wait tcp://mysql:3306 -timeout 20s && ./manage.py lms migrate\e[0m\r\n"
+  - delay: 1030
+    content: "Starting tutor_local_mongodb_1 ... \r\r\nStarting tutor_local_memcached_1 ... \r\r\n"
+  - delay: 15
+    content: "\e[2A\e[2K\rStarting tutor_local_mongodb_1   ... \e[32mdone\e[0m\r\e[2B"
+  - delay: 11
+    content: "Starting tutor_local_elasticsearch_1 ... \r\r\nStarting tutor_local_mysql_1         ... \r\r\n\e[2A\e[2K\rStarting tutor_local_memcached_1     ... \e[32mdone\e[0m\r"
+  - delay: 5
+    content: "\e[2B\e[3A\e[2K\rStarting tutor_local_elasticsearch_1 ... \e[32mdone\e[0m\r\e[3BStarting tutor_local_rabbitmq_1      ... \r\r\n\e[2A\e[2K\rStarting tutor_local_mysql_1         ... \e[32mdone\e[0m\r\e[2BStarting tutor_local_smtp_1          ... \r\r\n\e[2A\e[2K\rStarting tutor_local_rabbitmq_1      ... \e[32mdone\e[0m\r\e[2BStarting tutor_local_forum_1         ... \r\r\n\e[2A\e[2K\rStarting tutor_local_smtp_1          ... \e[32mdone\e[0m\r\e[2B"
+  - delay: 8
+    content: "\e[1A\e[2K\rStarting tutor_local_forum_1         ... \e[32mdone\e[0m\r\e[1B"
+  - delay: 1669
+    content: "2019/03/24 23:15:21 Waiting for: tcp://mysql:3306\r\n"
+  - delay: 10
+    content: "2019/03/24 23:15:21 Connected to tcp://mysql:3306\r\n"
+  - delay: 2662
+    content: "WARNING:py.warnings:/openedx/edx-platform/lms/djangoapps/courseware/__init__.py:5: DeprecationWarning: Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\r\n  warnings.warn(\"Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\", DeprecationWarning)\r\n\r\n"
+  - delay: 4891
+    content: "2019-03-24 23:15:28,992 WARNING 13 [enterprise.utils] utils.py:50 - Could not import Registry from third_party_auth.provider\r\n2019-03-24 23:15:28,992 WARNING 13 [enterprise.utils] utils.py:51 - cannot import name _LTI_BACKENDS\r\n"
+  - delay: 3415
+    content: "System check identified some issues:\r\n\r\nWARNINGS:\r\n\e[33;1m?: (mysql.W002) MySQL Strict Mode is not set for database connection 'default'\r\n\tHINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/1.11/ref/databases/#mysql-sql-mode\e[0m\r\n"
+  - delay: 753
+    content: "\e[36;1mOperations to perform:\e[0m\r\n\e[1m  Apply all migrations: \e[0madmin, api_admin, assessment, auth, badges, block_structure, bookmarks, branding, bulk_email, catalog, celery_utils, certificates, commerce, completion, consent, content_type_gating, contentserver, contenttypes, cors_csrf, course_action_state, course_duration_limits, course_goals, course_groups, course_modes, course_overviews, courseware, crawlers, credentials, credit, dark_lang, database_fixups, degreed, django_comment_common, django_notify, django_openid_auth, djcelery, edx_oauth2_provider, edx_proctoring, edxval, email_marketing, embargo, enterprise, entitlements, experiments, external_auth, grades, instructor_task, integrated_channel, lms_xblock, microsite_configuration, milestones, mobile_api, notes, oauth2, oauth2_provider, oauth_dispatch, oauth_provider, organizations, programs, redirects, rss_proxy, sap_success_factors, schedules, self_paced, sessions, shoppingcart, site_configuration, sites, social_django, splash, static_replace, status, student, submissions, survey, teams, theming, third_party_auth, track, user_api, user_authn, util, verified_track_content, verify_student, video_config, video_pipeline, waffle, waffle_utils, wiki, workflow, xapi, xblock_django\r\n"
+  - delay: 1213
+    content: "\e[36;1mRunning migrations:\e[0m\r\n  No migrations to apply.\r\n"
+  - delay: 4364
+    content: "\e[34mRunning cms migrations...\e[0m\r\n"
+  - delay: 38
+    content: "\e[35mdocker-compose -f /home/data/regis/.local/share/tutor/env/local/docker-compose.yml --project-name tutor_local run --rm cms bash -e -c dockerize -wait tcp://mysql:3306 -timeout 20s && ./manage.py cms migrate\e[0m\r\n"
+  - delay: 563
+    content: "Starting tutor_local_mongodb_1 ... \r\r\nStarting tutor_local_memcached_1 ... \r\r\nStarting tutor_local_elasticsearch_1 ... \r\r\n\e[3A\e[2K\rStarting tutor_local_mongodb_1       ... \e[32mdone\e[0m\r\e[3BStarting tutor_local_mysql_1         ... \r\r\n\e[2A\e[2K\rStarting tutor_local_rabbitmq_1      ... \r\r\nStarting tutor_local_elasticsearch_1 ... \e[32mdone\e[0m\r\e[2B\e[5A\e[2K\rStarting tutor_local_smtp_1          ... \r\r\nStarting tutor_local_memcached_1     ... \e[32mdone\e[0m\r\e[5B\e[3A\e[2K\rStarting tutor_local_mysql_1         ... \e[32mdone\e[0m\r\e[3B\e[2A\e[2K\rStarting tutor_local_rabbitmq_1      ... \e[32mdone\e[0m\r\e[2B\e[1A\e[2K\rStarting tutor_local_smtp_1          ... \e[32mdone\e[0m\r\e[1B"
+  - delay: 1176
+    content: "2019/03/24 23:15:40 Waiting for: tcp://mysql:3306\r\n2019/03/24 23:15:40 Connected to tcp://mysql:3306\r\n"
+  - delay: 1781
+    content: "WARNING:py.warnings:/openedx/edx-platform/lms/djangoapps/courseware/__init__.py:5: DeprecationWarning: Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\r\n  warnings.warn(\"Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\", DeprecationWarning)\r\n\r\n"
+  - delay: 4509
+    content: "2019-03-24 23:15:46,824 WARNING 14 [enterprise.utils] utils.py:50 - Could not import Registry from third_party_auth.provider\r\n2019-03-24 23:15:46,824 WARNING 14 [enterprise.utils] utils.py:51 - cannot import name EnterpriseCustomerUser\r\n"
+  - delay: 2373
+    content: "System check identified some issues:\r\n\r\nWARNINGS:\r\n\e[33;1m?: (mysql.W002) MySQL Strict Mode is not set for database connection 'default'\r\n\tHINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/1.11/ref/databases/#mysql-sql-mode\e[0m\r\n"
+  - delay: 507
+    content: "\e[36;1mOperations to perform:\e[0m\r\n\e[1m  Apply all migrations: \e[0madmin, api_admin, assessment, auth, block_structure, bookmarks, catalog, celery_utils, completion, consent, content_type_gating, contentserver, contentstore, contenttypes, course_action_state, course_creators, course_duration_limits, course_groups, course_modes, course_overviews, courseware, crawlers, credit, dark_lang, database_fixups, degreed, django_comment_common, django_notify, django_openid_auth, djcelery, edx_oauth2_provider, edx_proctoring, edxval, embargo, enterprise, entitlements, experiments, external_auth, integrated_channel, microsite_configuration, milestones, oauth2, oauth2_provider, oauth_dispatch, oauth_provider, organizations, redirects, sap_success_factors, schedules, self_paced, sessions, site_configuration, sites, static_replace, student, submissions, survey, tagging, theming, track, user_api, user_authn, user_tasks, verified_track_content, verify_student, video_config, video_pipeline, waffle, waffle_utils, wiki, workflow, xapi, xblock_config, xblock_django\r\n"
+  - delay: 913
+    content: "\e[36;1mRunning migrations:\e[0m\r\n  No migrations to apply.\r\n"
+  - delay: 3492
+    content: "\e[34mRunning forum migrations...\e[0m\r\n"
+  - delay: 30
+    content: "\e[35mdocker-compose -f /home/data/regis/.local/share/tutor/env/local/docker-compose.yml --project-name tutor_local run --rm forum bash -e -c bundle exec rake search:initialize && bundle exec rake search:rebuild_index\e[0m\r\n"
+  - delay: 408
+    content: "Starting tutor_local_mongodb_1 ... \r\r\nStarting tutor_local_elasticsearch_1 ... \r\r\n\e[2A\e[2K\rStarting tutor_local_mongodb_1       ... \e[32mdone\e[0m\r\e[2B\e[1A\e[2K\rStarting tutor_local_elasticsearch_1 ... \e[32mdone\e[0m\r\e[1B"
+  - delay: 3484
+    content: "/openedx/cs_comments_service/lib/tasks/deep_search.rake:7: warning: already initialized constant ROOT\r\n/openedx/cs_comments_service/lib/tasks/kpis.rake:7: warning: previous definition of ROOT was here\r\n"
+  - delay: 156
+    content: "/openedx/cs_comments_service/lib/tasks/flags.rake:6: warning: already initialized constant ROOT\r\n/openedx/cs_comments_service/lib/tasks/deep_search.rake:7: warning: previous definition of ROOT was here\r\n"
+  - delay: 245
+    content: "/openedx/cs_comments_service/vendor/bundle/ruby/2.4.0/gems/elasticsearch-transport-1.1.2/lib/elasticsearch/transport/transport/base.rb:52: warning: constant ::Fixnum is deprecated\r\n/openedx/cs_comments_service/vendor/bundle/ruby/2.4.0/gems/elasticsearch-transport-1.1.2/lib/elasticsearch/transport/transport/base.rb:54: warning: constant ::Fixnum is deprecated\r\n"
+  - delay: 354
+    content: "/openedx/cs_comments_service/models/constants.rb:2: warning: already initialized constant COURSE_ID\r\n/openedx/cs_comments_service/lib/tasks/db.rake:28: warning: previous definition of COURSE_ID was here\r\n"
+  - delay: 55
+    content: "W, [2019-03-24T23:15:58.844210 #6]  WARN -- : Overwriting existing field _id in class User.\r\n"
+  - delay: 28
+    content: "W, [2019-03-24T23:15:58.872218 #6]  WARN -- : MONGODB | Unsupported client option 'max_retries'. It will be ignored.\r\nW, [2019-03-24T23:15:58.872299 #6]  WARN -- : MONGODB | Unsupported client option 'retry_interval'. It will be ignored.\r\nW, [2019-03-24T23:15:58.872344 #6]  WARN -- : MONGODB | Unsupported client option 'timeout'. It will be ignored.\r\n"
+  - delay: 22
+    content: "I, [2019-03-24T23:15:58.892318 #6]  INFO -- : Skipping initialization. The 'content' alias already exists. If 'rake search:validate_index' indicates a problem with the mappings, you could either use 'rake search:rebuild_index' to reload from the db or 'rake search:initialize[true]' to force initialization with an empty index.\r\n"
+  - delay: 2116
+    content: "/openedx/cs_comments_service/lib/tasks/deep_search.rake:7: warning: already initialized constant ROOT\r\n/openedx/cs_comments_service/lib/tasks/kpis.rake:7: warning: previous definition of ROOT was here\r\n"
+  - delay: 128
+    content: "/openedx/cs_comments_service/lib/tasks/flags.rake:6: warning: already initialized constant ROOT\r\n/openedx/cs_comments_service/lib/tasks/deep_search.rake:7: warning: previous definition of ROOT was here\r\n"
+  - delay: 229
+    content: "/openedx/cs_comments_service/vendor/bundle/ruby/2.4.0/gems/elasticsearch-transport-1.1.2/lib/elasticsearch/transport/transport/base.rb:52: warning: constant ::Fixnum is deprecated\r\n/openedx/cs_comments_service/vendor/bundle/ruby/2.4.0/gems/elasticsearch-transport-1.1.2/lib/elasticsearch/transport/transport/base.rb:54: warning: constant ::Fixnum is deprecated\r\n"
+  - delay: 328
+    content: "/openedx/cs_comments_service/models/constants.rb:2: warning: already initialized constant COURSE_ID\r\n/openedx/cs_comments_service/lib/tasks/db.rake:28: warning: previous definition of COURSE_ID was here\r\n"
+  - delay: 49
+    content: "W, [2019-03-24T23:16:01.743637 #1]  WARN -- : Overwriting existing field _id in class User.\r\n"
+  - delay: 30
+    content: "W, [2019-03-24T23:16:01.774385 #1]  WARN -- : MONGODB | Unsupported client option 'max_retries'. It will be ignored.\r\nW, [2019-03-24T23:16:01.774465 #1]  WARN -- : MONGODB | Unsupported client option 'retry_interval'. It will be ignored.\r\nW, [2019-03-24T23:16:01.774501 #1]  WARN -- : MONGODB | Unsupported client option 'timeout'. It will be ignored.\r\n"
+  - delay: 254
+    content: "I, [2019-03-24T23:16:02.027960 #1]  INFO -- : Added mappings to index: content_20190324231601778.\r\nI, [2019-03-24T23:16:02.028088 #1]  INFO -- : Created new index: content_20190324231601778.\r\n"
+  - delay: 175
+    content: "I, [2019-03-24T23:16:02.202719 #1]  INFO -- : Imported batch 1 into the index\r\n"
+  - delay: 21
+    content: "I, [2019-03-24T23:16:02.224959 #1]  INFO -- : Catch up from 2019-03-24 23:11:01 UTC complete.\r\n"
+  - delay: 79
+    content: "I, [2019-03-24T23:16:02.304226 #1]  INFO -- : Alias [content] now points to index [content_20190324231601778].\r\n"
+  - delay: 13
+    content: "I, [2019-03-24T23:16:02.318160 #1]  INFO -- : Catch up from 2019-03-24 23:11:02 UTC complete.\r\nI, [2019-03-24T23:16:02.318261 #1]  INFO -- : Rebuild index complete.\r\n"
+  - delay: 548
+    content: "\e[34mRunning notes migrations...\e[0m\r\n"
+  - delay: 27
+    content: "\e[35mdocker-compose -f /home/data/regis/.local/share/tutor/env/local/docker-compose.yml --project-name tutor_local run --rm notes bash -e -c ./manage.py migrate\e[0m\r\n"
+  - delay: 410
+    content: "Starting tutor_local_mysql_1 ... \r\r\n\e[1A\e[2K\rStarting tutor_local_mysql_1 ... \e[32mdone\e[0m\r\e[1B"
+  - delay: 2069
+    content: "System check identified some issues:\r\n\r\nWARNINGS:\r\n\e[33;1m?: (mysql.W002) MySQL Strict Mode is not set for database connection 'default'\r\n\tHINT: MySQL's Strict Mode fixes many data integrity problems in MySQL, such as data truncation upon insertion, by escalating warnings into errors. It is strongly recommended you activate it. See: https://docs.djangoproject.com/en/1.11/ref/databases/#mysql-sql-mode\e[0m\r\n"
+  - delay: 43
+    content: "\e[36;1mOperations to perform:\e[0m\r\n\e[1m  Apply all migrations: \e[0mauth, contenttypes, v1\r\n"
+  - delay: 11
+    content: "\e[36;1mRunning migrations:\e[0m\r\n  No migrations to apply.\r\n"
+  - delay: 618
+    content: "\e[34mCreating oauth2 users...\e[0m\r\n"
+  - delay: 42
+    content: "\e[35mdocker-compose -f /home/data/regis/.local/share/tutor/env/local/docker-compose.yml --project-name tutor_local run --rm lms bash -e -c ./manage.py lms create_oauth2_client \\\r\n    \"http://androidapp.com\" \"http://androidapp.com/redirect\" public \\\r\n    --client_id android --client_secret d0SOcON5fpgV75Ovc0EQ6D8l \\\r\n    --trusted\r\n\r\n\r\n./manage.py lms manage_user notes notes@overhang.io --staff --superuser\r\n./manage.py lms create_oauth2_client \\\r\n    \"http://notes.openedx:8000\" \"http://notes.openedx:8000/complete/edx-oidc/\" confidential \\\r\n    --client_name edx-notes --client_id notes --client_secret tm3VRKEBt9RBN1jKftHchI3d \\\r\n    --trusted --logout_uri \"http://notes.openedx:8000/logout/\" --username notes\e[0m\r\n"
+  - delay: 469
+    content: "Starting tutor_local_memcached_1 ... \r\r\nStarting tutor_local_mongodb_1   ... \r\r\n"
+  - delay: 5
+    content: "Starting tutor_local_elasticsearch_1 ... \r\r\nStarting tutor_local_mysql_1         ... \r\r\n\e[4A\e[2K\rStarting tutor_local_smtp_1          ... \r\r\nStarting tutor_local_memcached_1     ... \e[32mdone\e[0m\r\e[4BStarting tutor_local_rabbitmq_1      ... \r\r\n\e[5A\e[2K\rStarting tutor_local_mongodb_1       ... \e[32mdone\e[0m\r\e[5B\e[4A\e[2K\rStarting tutor_local_elasticsearch_1 ... \e[32mdone\e[0m\r\e[4B\e[3A\e[2K\rStarting tutor_local_mysql_1         ... \e[32mdone\e[0m\r\e[3B\e[2A\e[2K\rStarting tutor_local_smtp_1          ... \e[32mdone\e[0m\r\e[2B\e[1A\e[2K\rStarting tutor_local_rabbitmq_1      ... \e[32mdone\e[0m\r\e[1BStarting tutor_local_forum_1         ... \r\r\n\e[1A\e[2K\rStarting tutor_local_forum_1         ... \e[32mdone\e[0m\r\e[1B"
+  - delay: 2804
+    content: "WARNING:py.warnings:/openedx/edx-platform/lms/djangoapps/courseware/__init__.py:5: DeprecationWarning: Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\r\n  warnings.warn(\"Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\", DeprecationWarning)\r\n\r\n"
+  - delay: 3908
+    content: "2019-03-24 23:16:13,291 WARNING 6 [enterprise.utils] utils.py:50 - Could not import Registry from third_party_auth.provider\r\n2019-03-24 23:16:13,292 WARNING 6 [enterprise.utils] utils.py:51 - cannot import name _LTI_BACKENDS\r\n"
+  - delay: 3338
+    content: "{\r\n    \"name\": \"\", \r\n    \"url\": \"http://androidapp.com\", \r\n    \"logout_uri\": null, \r\n    \"redirect_uri\": \"http://androidapp.com/redirect\", \r\n    \"client_id\": \"android\", \r\n    \"user\": null, \r\n    \"client_type\": 1, \r\n    \"client_secret\": \"d0SOcON5fpgV75Ovc0EQ6D8l\"\r\n}\r\n"
+  - delay: 1758
+    content: "WARNING:py.warnings:/openedx/edx-platform/lms/djangoapps/courseware/__init__.py:5: DeprecationWarning: Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\r\n  warnings.warn(\"Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\", DeprecationWarning)\r\n\r\n"
+  - delay: 3591
+    content: "2019-03-24 23:16:21,978 WARNING 122 [enterprise.utils] utils.py:50 - Could not import Registry from third_party_auth.provider\r\n2019-03-24 23:16:21,978 WARNING 122 [enterprise.utils] utils.py:51 - cannot import name _LTI_BACKENDS\r\n"
+  - delay: 2397
+    content: "\e[31;1mFound existing user: \"notes\"\r\n\e[0m"
+  - delay: 8
+    content: "\e[31;1mAdding user \"notes\" to groups []\r\n\e[0m\e[31;1mRemoving user \"notes\" from groups []\r\n\e[0m"
+  - delay: 1674
+    content: "WARNING:py.warnings:/openedx/edx-platform/lms/djangoapps/courseware/__init__.py:5: DeprecationWarning: Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\r\n  warnings.warn(\"Importing 'lms.djangoapps.courseware' as 'courseware' is no longer supported\", DeprecationWarning)\r\n\r\n"
+  - delay: 3638
+    content: "2019-03-24 23:16:29,695 WARNING 1 [enterprise.utils] utils.py:50 - Could not import Registry from third_party_auth.provider\r\n2019-03-24 23:16:29,695 WARNING 1 [enterprise.utils] utils.py:51 - cannot import name _LTI_BACKENDS\r\n"
+  - delay: 2616
+    content: "{\r\n    \"name\": \"edx-notes\", \r\n    \"url\": \"http://notes.openedx:8000\", \r\n    \"logout_uri\": \"http://notes.openedx:8000/logout/\", \r\n    \"redirect_uri\": \"http://notes.openedx:8000/complete/edx-oidc/\", \r\n    \"client_id\": \"notes\", \r\n    \"user\": {\r\n        \"username\": \"notes\", \r\n        \"first_name\": \"\", \r\n        \"last_name\": \"\", \r\n        \"is_active\": true, \r\n        \"email\": \"notes@overhang.io\", \r\n        \"is_superuser\": true, \r\n        \"is_staff\": true, \r\n        \"last_login\": null, \r\n        \"password\": \"pbkdf2_sha256$36000$xmQteTs1KQGi$golnD4MgHQ0Kd2F6CScMBWkgpijSD4Q+T84RNRbmxdk=\", \r\n        \"id\": 2, \r\n        \"date_joined\": \"2019-03-20T18:27:47.210Z\"\r\n    }, \r\n    \"client_type\": 0, \r\n    \"client_secret\": \"tm3VRKEBt9RBN1jKftHchI3d\"\r\n}\r\n"
+  - delay: 893
+    content: "\e[34mDatabases ready.\e[0m\r\n\e[32m=============================================\r\n        HTTPS certificates generation\r\n=============================================\e[0m\r\n"
+  - delay: 26
+    content: "\e[34mHTTPS is not activated: certificate generation skipped\e[0m\r\n\e[32m======================================================\r\n        Starting the platform in detached mode\r\n======================================================\e[0m\r\n"
+  - delay: 27
+    content: "\e[35mdocker-compose -f /home/data/regis/.local/share/tutor/env/local/docker-compose.yml --project-name tutor_local up --remove-orphans -d\e[0m\r\n"
+  - delay: 723
+    content: "tutor_local_memcached_1 is up-to-date\r\ntutor_local_smtp_1 is up-to-date\r\ntutor_local_mongodb_1 is up-to-date\r\ntutor_local_mysql_1 is up-to-date\r\ntutor_local_elasticsearch_1 is up-to-date\r\ntutor_local_rabbitmq_1 is up-to-date\r\nCreating tutor_local_openedx-assets_1 ... \r\r\ntutor_local_forum_1 is up-to-date\r\n"
+  - delay: 6
+    content: "Creating tutor_local_cms_1            ... \r\r\n"
+  - delay: 10
+    content: "Creating tutor_local_notes_1          ... \r\r\n"
+  - delay: 19
+    content: "Creating tutor_local_lms_1            ... \r\r\n"
+  - delay: 1762
+    content: "\e[3A\e[2K\rCreating tutor_local_cms_1            ... \e[32mdone\e[0m\r\e[3BCreating tutor_local_cms_worker_1     ... \r\r\n"
+  - delay: 1205
+    content: "\e[5A\e[2K\rCreating tutor_local_openedx-assets_1 ... \e[32mdone\e[0m\r\e[5B"
+  - delay: 1701
+    content: "\e[3A\e[2K\rCreating tutor_local_notes_1          ... \e[32mdone\e[0m\r\e[3B"
+  - delay: 1199
+    content: "\e[2A\e[2K\rCreating tutor_local_lms_1            ... \e[32mdone\e[0m\r\e[2B"
+  - delay: 6
+    content: "Creating tutor_local_lms_worker_1     ... \r\r\nCreating tutor_local_nginx_1          ... \r\r\n"
+  - delay: 678
+    content: "\e[3A\e[2K\rCreating tutor_local_cms_worker_1     ... \e[32mdone\e[0m\r\e[3B"
+  - delay: 4517
+    content: "\e[2A\e[2K\rCreating tutor_local_lms_worker_1     ... \e[32mdone\e[0m\r\e[2B"
+  - delay: 1283
+    content: "\e[1A\e[2K\rCreating tutor_local_nginx_1          ... \e[32mdone\e[0m\r\e[1B"
+  - delay: 107
+    content: "\e[34mThe Open edX platform is now running in detached mode\e[0m\r\n\e[34mYour Open edX platform is ready and can be accessed at the following urls:\r\n\r\n    http://overhang.io\r\n    http://studio.overhang.io\e[0m\r\n"
+  - delay: 852
+    content: "\e[0;33m\e[01;32mregis@black\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 7269
+    content: "logout\r\n"

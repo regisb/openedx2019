@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Conf@42 - 42AI, 14 novembre 2017">
+        <meta name="author" content="Régis Behmo">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <title>Deploying a robust, scalable Open edX platform in 1 click (or less) with Tutor | Open edX Conference, March 28 2019</title>
+        <link rel="stylesheet" href="static/css/reveal.css">
+        <link rel="stylesheet" href="static/css/theme/night.css">
+        <link rel="stylesheet" href="static/css/fontawesome.min.css">
+        <link rel="stylesheet" href="static/css/highlightjs/monokai.css">
+        <link rel="stylesheet" href="static/css/regisb.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'static/css/print/pdf.css' : 'static/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <!--<section data-background-image="static/img/hahaha.jpg">-->
+                <section data-background-image="static/img/ucsd-dark.jpg">
+                    <h2>Deploying a robust, scalable Open edX platform in 1 click</h2>
+                    <h3>(or less)</h3>
+                    <h2>with <span class="green">Tutor</span></h2>
+                    <p><a href="https://minutebutterfly.com">Régis Behmo</a>
+                    <a href="https://github.com/regisb"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/regisb"><i class="fab fa-twitter"></i></a>
+                    <a href="https://stackoverflow.com/users/356528/r%c3%a9gis-b?tab=profile"><i class="fab fa-stack-overflow"></i></a>
+                    @regisb<br></p>
+                    <p>Open edX Conference, San Diego, March 28 2019</p>
+                    <p>Slides: <a href="https://regisb.github.io/openedx2019">https://regisb.github.io/openedx2019</a></p>
+                    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="static/img/creativecommons.png" /></a></p>
+                </section>
+
+                <section>
+                    <h2>What's <span class="green">Tutor</span>?</h2>
+                    <h3 class="fragment orange">A docker-based Open edX distribution designed for simplicity and maintainability</h3>
+                    <p class="fragment">Same source code</p>
+                    <p class="fragment">Different deployment scripts</p>
+                    <p class="fragment">Packaged in Docker containers</p>
+                    <p class="fragment">For production and local development</p>
+                </section>
+
+                <section>
+                    <ol>
+                        <li>Download <code class="green">tutor</code> binary</li>
+                        <li><code class="green">tutor local quickstart</code></li>
+                        <li>Wait 10 minutes</li>
+                    </ol>
+                </section>
+
+                <section data-background-image="static/img/quickstart.gif" data-background-size="contain"></section>
+                <section data-background-image="static/img/lms.png" data-background-size="contain"></section>
+                <section data-background-image="static/img/cms.png" data-background-size="contain"></section>
+
+                <section>
+                    <h3><i class="fas fa-magic"></i></h3>
+                    <p>Not root access required</p>
+                    <p>No requirement</p>
+                    <p>No Ansible playbook</p>
+                    <p><em>All</em> files and data in a single <code class="green">tutor</code> folder</p>
+                </section>
+
+                <section>
+                    <h3>So what?</h3>
+                </section>
+
+                <section>
+                    <h3><span class="orange">Myth #1</span> Open edX is hard to install</h3>
+                    <ol class="fragment">
+                        <li>Install tutor</li>
+                        <li><code class="green">tutor local quickstart</code></li>
+                    </ol>
+                    <p></p>
+                    <h3 class="fragment"><span class="orange">Myth #2</span> Open edX is hard to upgrade</h3>
+                    <ol class="fragment">
+                        <li>Upgrade tutor</li>
+                        <li><code class="green">tutor local quickstart --pullimages</code></li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3>Features</h3>
+                    <ul class="no-bullet">
+                        <li>🍾 Ironwood!</li>
+                        <li><i class="pink fas fa-lock"></i> HTTPS</li>
+                        <li><i class="pink fas fa-palette"></i> Theming</li>
+                        <li><i class="pink fas fa-wrench"></i> Custom xblocks</li>
+                        <li><i class="pink fas fa-language"></i> Extra locales</li>
+                        <li><i class="pink fas fa-terminal"></i> Web user interface</li>
+                        <li><i class="pink fab fa-android"></i> Android application</li>
+                        <li><i class="pink fas fa-dharmachakra"></i> Kubernetes (beta)</li>
+                        <li><i class="pink fas fa-server"></i> Multiple platforms/server</li>
+                        <li>...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Upcoming features</h3>
+                    <ul class="no-bullet">
+                        <li><i class="pink fas fa-cloud"></i> Multi-server deployments</li>
+                        <li><i class="pink fas fa-puzzle-piece"></i> 3rd-party plugins (themes, xblocks, apps...)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Sustainability</h2>
+                    <table class="no-border">
+                        <thead>
+                            <tr>
+                                <td><i class="pink fas fa-beer"></i> Free edition</td>
+                                <td><i class="pink fas fa-gem"></i> Commercial LTS edition</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: none;">
+                                <td>
+                                    <ul class="no-bullet">
+                                        <li>AGPL</li>
+                                        <li>All features included</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="no-bullet">
+                                        <li><i class="pink fab fa-aws"></i> 1-click AWS AMI, no SSH required</li>
+                                        <li class="fragment"><i class="pink fas fa-hat-wizard"></i> <code class="green">sudo apt-get install openedx</code></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section data-background-image="static/img/marketplace.png" data-background-size="contain"></section>
+                <section data-background-image="static/img/marketplace-dark.png" data-background-size="contain">
+                    <h3>💪 Want to support <span class="green">Tutor</span> development?</h3>
+                    <p>Launch an AWS instance with the Tutor AMI today</p>
+                    <p><a href="https://overhang.io/tutor/support">https://overhang.io/tutor/support</a></p>
+                </section>
+
+                <section>
+                    <h3>Links</h3>
+                    <ul class="no-bullet">
+                        <li>💪 Support: <a href="https://overhang.io/tutor/support">https://overhang.io/tutor/support</a></li>
+                        <li><i class="fas fa-book"></i> Documentation: <a href="https://docs.tutor.overhang.io">https://docs.tutor.overhang.io</a></li>
+                        <li><i class="fab fa-github"></i> Source code: <a href="https://github.com/regisb/tutor">https://github.com/regisb/tutor</a></li>
+                        <li><i class="fas fa-user-friends"></i> Community: <a href="https://discuss.overhang.io">https://discuss.overhang.io</a></li>
+                        <li><i class="fab fa-slideshare"></i> These slides: <a href="https://regisb.github.io/openedx2019">https://regisb.github.io/openedx2019</a></li>
+                    </ul>
+                    <p></p>
+                    <h3>CLI cheatsheet</h3>
+                    <ul class="no-bullet">
+                        <li><code class="green">tutor local quickstart</code> launch Open edX from scratch</li>
+                        <li><code class="green">tutor config save</code> (re)configure your platform</li>
+                        <li><code class="green">tutor images build all</code> build docker images locally</li>
+                        <li><code class="green">tutor k8s quickstart</code> deploy on Kubernetes</li>
+                        <li><code class="green">tutor webui start</code> launch a cool web user interface</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <script src="static/js/head.min.js"></script>
+        <script src="static/js/reveal.js"></script>
+        <script src="static/js/jquery-3.2.1.min.js"></script>
+        <script src="static/js/highlight.min.js"></script>
+        <script>
+            Reveal.initialize({
+                controls: false,
+                history: true,
+                transition: 'fade',
+            });
+
+            // rainbowify stuff
+            var rainbowPos = 0;
+            $(".rainbow").each(function(index, elt) {
+                var colors = ["red", "orange", "yellow", "green", "blue", "magenta", "purple"];
+                var content = "";
+                var letters = elt.textContent.split("");
+                for(var i = 0; i < letters.length; i++) {
+                    var color = colors[rainbowPos % colors.length];
+                    //var color = colors[parseInt(Math.random() * colors.length)];
+                    content += "<span style=\"color: " + color + ";\">" + letters[i] + "<\/span>";
+                    rainbowPos += 1;
+                }
+                $(elt).html(content);
+            });
+        </script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Comic Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Comic_Sans_MS.ttf) format('truetype');
+}
+
+.reveal .orange, .reveal h1.orange, .reveal h2.orange, .reveal h3.orange {
+    color: #e7ad52;
+}
+.reveal .pink, .reveal h1.pink, .reveal h2.pink, .reveal h3.pink {
+    color: #e61089
+}
+.reveal .green, .reveal h1.green, .reveal h2.green, .reveal h3.green {
+    color: #17ff2e;
+}
+.reveal table th, .reveal table td {
+    text-align: center;
+}
+.reveal table th:not(:last-child), .reveal table td:not(:last-child) {
+    border-right: 1px solid white
+}
+.reveal ul.no-bullet li {
+    list-style-type: none;
+}
+.reveal table.no-border td {
+    border: none;
+}
+.discrete {
+    opacity: 0.2;
+}
+.not-discrete {
+    opacity: 1;
+}
+.reveal .stupid {
+    font-family: "Comic Sans";
+    font-weight: bold;
+}
+.fragment.zerospace:not(.current-fragment) {
+    position: absolute;
+    left: -10000px;
+}
+.reveal .small-text {
+    font-size: 80%;
+}
